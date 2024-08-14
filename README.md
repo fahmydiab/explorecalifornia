@@ -868,7 +868,7 @@ We will follow the same automation using Makefile, Let's walk step by step
 
     ```yaml
     appName: explorecalifornia-com
-    imageName: localhost:5000/explorecalifornia.com
+    imageName: localhost:5000/explorecalifornia-img
     serviceName: explorecalifornia-svc
     serviceAddress: explorecalifornia.com
     servicePort: 8080
