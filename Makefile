@@ -51,3 +51,10 @@ delete_kind_cluster: delete_docker_registry
 
 delete_docker_registry:
 	docker stop local-registry && docker rm local-registry
+
+install_helm_ubuntu:
+	sudo apt install -y snapd && \
+		sudo snap install helm --classic
+
+install_app_helm: install_helm_ubuntu 
+	helm upgrade --atomic --install explore-california-website ./chart
