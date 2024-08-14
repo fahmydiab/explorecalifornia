@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: explorecalifornia-dep
+  name: explorecalifornia-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: explorecalifornia-dep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: explorecalifornia-dep
+    spec:
+      containers:
+      - image: localhost:5000/explorecalifornia-img
+        name: explorecalifornia-img
+        resources: {}
+status: {}
